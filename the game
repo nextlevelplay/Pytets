@@ -22,5 +22,5 @@ def game():
                 print("Wrong!!")
                 print(mylist)
     else:
-        print("okay, will you see nex time")
+        print("okay, see you next time")
 game()
