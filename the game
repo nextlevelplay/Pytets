@@ -1,7 +1,7 @@
 from random import shuffle
 
 mylist =["x", "x", 1]
-play = input("will you play the game?: ")
+play = input("will you play the game? Write (yes / no): ")
 def shuffle_list(mylist):
     shuffle(mylist)
     return mylist
