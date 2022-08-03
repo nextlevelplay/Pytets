@@ -10,17 +10,28 @@ def shuffle_list(mylist):
     return mylist
 
 def game():
-    print("   Welcome to Edwin ruletka", item_list[0], item_list[1], item_list[2], sep='\n')
+    
+    rerol = 'y'
+#game start
+    print('  Welcome to the "Edwin ruletka" ', item_list[0], item_list[1], item_list[2], sep='\n')
     start = input('      start? (y / n): ')
+#player settings
     cash = int(input('      your sallar: '))
     game_cash = cash * 0.1
     print('you have ()', int(game_cash), ') game points in your game balance!')
     print('Game point per rol:  5  |  10  |  25 | 50 | 100 ')
     point_rol = int(input())
-    for i in range(1, 20):
-        sys.stderr.write(f"{shuffle_list(item_list)}\r")
-        time.sleep(.1)
-    print(item_list)
+    game_cash =- point_rol
+#game_logica
+    while rerol == 'y':
+        for i in range(1, 20):
+            sys.stderr.write(f"{shuffle_list(item_list)}\r")
+            time.sleep(.20)
+
+        rerol = input('rerol? (y / n): ')
+        if rerol == 'n':
+            break
+    print(game_cash)
     
     
 
